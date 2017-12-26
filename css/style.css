@@ -1,7 +1,22 @@
-body {
-    font-family: "Verdana", sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+
+/*Default*/
+*{
+    margin:0;
+    padding:0;
 }
 
+html{
+    height: 100%;
+}
+
+body {
+/*    font-family: "Verdana", sans-serif;*/
+}
+
+/*Hamburger Menu*/
 .sidenav {
     height: 100%;
     width: 0;
@@ -40,3 +55,61 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+/*Home Page*/
+
+.container{
+    min-height:100%;
+    overflow:hidden;
+}
+
+#leftCol{
+    background-color:beige;
+    padding: 17em 2em 17em 2em;
+    font-size: 15px;
+    transition: 0.3s;
+/*    position:fixed;*/
+    
+}
+
+
+
+#rightCol{
+    background-image: url('http://s1.picswalls.com/wallpapers/2014/07/19/vintage-desktop-wallpaper_111901723_76.jpg');
+    background-size:cover;
+    
+    color:white;
+
+}
+
+#name{
+    font-size: 10em;
+    text-align: center;
+    font-family: 'Cookie', cursive;
+/*    font-family: 'Marck Script', cursive;*/
+    padding-top: 1em;
+/*    padding: 5em;*/
+/*    position:fixed;*/
+}
+
+#nav{
+    list-style: none;
+    text-align: center;  
+/*    color:red;*/
+    font-family: 'Unica One', cursive;
+    font-size: 1.75em;
+}
+
+.nav1 li a{
+    color:black;
+}
+
+.nav1 a:hover {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;  
+    position: relative;
+    color:white;
+}
+
