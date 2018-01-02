@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Marck+Script');
 @import url('https://fonts.googleapis.com/css?family=Unica+One');
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+@import url('https://fonts.googleapis.com/css?family=Sriracha');
 
 html{
     height: 100%;
@@ -243,7 +244,7 @@ ul ul a {
 }
 
 .text {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Sriracha', cursive;
   color: white;
   font-size: 35px;
   position: absolute;
