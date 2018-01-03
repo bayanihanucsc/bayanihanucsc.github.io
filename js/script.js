@@ -1,14 +1,6 @@
 function toggleSidebar() {
-
-
    $('#sidebarCollapse').on('click', function() {
-       // closes any opened lists in sidebar with collapse class
-      // $('.collapse').collapse('hide');
-
-      // adds .active class to sidebar, which makes the sidebar appear
-      $('#sidebar').addClass('active');
-
-      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      $('#sidebar').addClass('active');   // adds .active class to sidebar, which makes the sidebar appear
       $('.overlay').fadeIn();  // fades in the hidden .overlay element 
    });
 
@@ -16,27 +8,14 @@ function toggleSidebar() {
       $('#sidebar').removeClass('active');
       $('.overlay').fadeOut();
    });
-    
-
-
+  
 }
 
+// function for hovering over links
 $("#hoverLinks").find("a").hover(function () {
     $("#PortfolioInfo>*").hide()
         .filter($(this).data("filter")).show()
 })
-
-function openNav() {
-   document.getElementById("mySidenav").style.width = "200px";
-}
-
-function closeNav() {
-   document.getElementById("mySidenav").style.width = "0";
-}
-
-function test1() {
-   console.log('yolo');
-}
 
 
 window.sr = ScrollReveal();
