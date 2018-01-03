@@ -26,8 +26,7 @@ body {
     padding: 17em 2em 17em 2em;
     font-size: 15px;
     transition: 0.3s;
-/*    position:fixed;*/
-    
+    background-size: 100%;
 }
 
 #rightCol{
@@ -174,13 +173,29 @@ ul ul a {
     z-index: 1;
 }
 
-/*-----------------------------------Aspect Page--------------------------------*/
+/*--------------------------------About Page--------------------------------------*/
 
 /*
-#aspect_bg{
-    background-color:floralwhite;
+.about{
+    background-image: url('http://www.androidguys.com/wp-content/uploads/2015/12/Poly-Lakeside.jpg');
+    padding: 2em 0;
+    background-size: auto;
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------Aspect Page--------------------------------*/
 
 #aspect_title{
     text-align: center;
@@ -194,19 +209,6 @@ ul ul a {
     text-align: center;
     
 }
-
-/*
-#activities{
-    
-    padding: 2em;
-}
-*/
-
-/*
-.container{
-    position: relative;
-}
-*/
 
 #mouse_over{
   position: relative;
@@ -257,6 +259,7 @@ ul ul a {
     padding: 1em;
 }
 
+/*
 .show{
     list-style: none;
 }
@@ -268,25 +271,15 @@ ul ul a {
     position: relative;
     color:black;
 }
+*/
 
 /*-------------List of Aspects---------*/
-
-/*
-.extra { 
-    display: none;
-}
-
-p:hover .extra {
-    display: inline-block;
-}
-*/
 
 #hoverLinks{
     text-decoration: none;
     list-style: none;
     text-align: center;  
     position: relative;
-    color:black;
     padding: 5em;
 }
 
@@ -309,10 +302,10 @@ p:hover .extra {
 }
 
 .list li a{
+    font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color:black;
     transition: 0.3s;
-
 }
 
 .list a:hover {
@@ -321,6 +314,10 @@ p:hover .extra {
     text-align: center;  
     position: relative;
     color:white;
+}
+
+#test{
+    margin: 30px;
 }
 
 

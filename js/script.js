@@ -17,12 +17,14 @@ function toggleSidebar() {
       $('.overlay').fadeOut();
    });
     
+
+
+}
+
 $("#hoverLinks").find("a").hover(function () {
     $("#PortfolioInfo>*").hide()
         .filter($(this).data("filter")).show()
 })
-
-}
 
 function openNav() {
    document.getElementById("mySidenav").style.width = "200px";
