@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Unica+One');
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
 @import url('https://fonts.googleapis.com/css?family=Sriracha');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 html{
     height: 100%;
@@ -286,6 +287,7 @@ p:hover .extra {
     text-align: center;  
     position: relative;
     color:black;
+    padding: 5em;
 }
 
 #PortfolioInfo {
@@ -307,6 +309,7 @@ p:hover .extra {
 }
 
 .list li a{
+    font-family: 'Josefin Sans', sans-serif;
     color:black;
     transition: 0.3s;
 
