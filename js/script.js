@@ -11,11 +11,12 @@ function toggleSidebar() {
   
 }
 
-// function for hovering over links
+// function for hovering links
 $("#hoverLinks").find("a").hover(function () {
     $("#PortfolioInfo>*").hide()
         .filter($(this).data("filter")).show()
 })
+
 
 
 window.sr = ScrollReveal();
