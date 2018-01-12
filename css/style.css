@@ -175,24 +175,72 @@ ul ul a {
 
 /*--------------------------------About Page--------------------------------------*/
 
+.aspect_bg{
+    background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-180429.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.arrow{
+    background-image: url('https://www.thewallpapers.org/photo/57190/feeling_too_tall.jpg');
+    padding: 2em;
+    background-size: cover;
+    -webkit-clip-path: polygon(49% 30%, 100% 57%, 100% 82%, 49% 56%, 0 82%, 0 58%);
+    clip-path: polygon(49% 30%, 100% 57%, 100% 82%, 49% 56%, 0 82%, 0 58%);
+}
+
+/*transition*/
+.parallax--bg{
+    transition: initial;
+}
+
+#whoarewe{
+/*    padding:2em;*/
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+#mission{
+    padding:2em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.section1{
+    background-color:lightgrey;
+    padding: 15em 2em;
+}
+
+.blank{
+    padding:15em;
+}
+
+/*-------------About Page Nav Bar--------------*/
+
 /*
-.about{
-    background-image: url('http://www.androidguys.com/wp-content/uploads/2015/12/Poly-Lakeside.jpg');
-    padding: 2em 0;
-    background-size: auto;
+.nav_about{
+    background-color: lightgrey;
+    padding-top: 20px;
+    height: 40px;
+    top:0;
+    position: fixed;
+    transition: top 0.2s ease-in-out;
 }
 */
 
+.nav-up {
+    top: -50px;
+}
 
-
-
-
-
-
-
-
-
-
+header {
+    background-color: lightgrey;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    overflow: auto;
+}
 
 
 /*-----------------------------------Aspect Page--------------------------------*/
@@ -234,8 +282,6 @@ ul ul a {
   opacity: 0;
   transition: .4s ease;
   background-color:darkseagreen;
-/*    background-image: url('https://pbs.twimg.com/profile_images/926571626157748226/5GYiO0FM.jpg');*/
-    
 }
 
 #mouse_over:hover .overlay_1{
@@ -259,19 +305,7 @@ ul ul a {
     padding: 1em;
 }
 
-/*
-.show{
-    list-style: none;
-}
 
-.show a:hover{
-    text-decoration: none;
-    list-style: none;
-    text-align: center;  
-    position: relative;
-    color:black;
-}
-*/
 
 /*-------------List of Aspects---------*/
 
@@ -326,7 +360,7 @@ ul ul a {
 
 #content {
     width: 100%;
-    padding: 20px;
+/*    padding-top: 20px;*/
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
