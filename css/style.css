@@ -178,15 +178,8 @@ ul ul a {
 .aspect_bg{
     background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-180429.jpg');
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-}
-
-.arrow{
-    background-image: url('https://www.thewallpapers.org/photo/57190/feeling_too_tall.jpg');
-    padding: 2em;
-    background-size: cover;
-    -webkit-clip-path: polygon(49% 30%, 100% 57%, 100% 82%, 49% 56%, 0 82%, 0 58%);
-    clip-path: polygon(49% 30%, 100% 57%, 100% 82%, 49% 56%, 0 82%, 0 58%);
 }
 
 /*transition*/
@@ -195,51 +188,52 @@ ul ul a {
 }
 
 #whoarewe{
-/*    padding:2em;*/
+    padding:2em;
+    font-size: 2em;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     
 }
 
 #mission{
-    padding:2em;
+    padding:10%;
+    font-size: 2em;
+    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .section1{
-    background-color:lightgrey;
+    background-color:#DCDCDC;
     padding: 15em 2em;
 }
 
 .blank{
-    padding:15em;
+    padding: 25%;
+}
+
+#statement{
+    font-family: 'Cookie', cursive;
+    font-size: 100px;
+}
+
+#events{
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 /*-------------About Page Nav Bar--------------*/
-
-/*
-.nav_about{
-    background-color: lightgrey;
-    padding-top: 20px;
-    height: 40px;
-    top:0;
-    position: fixed;
-    transition: top 0.2s ease-in-out;
-}
-*/
 
 .nav-up {
     top: -50px;
 }
 
 header {
-    background-color: lightgrey;
+    background-color: #DCDCDC;
     height: 50px;
     position: fixed;
     top: 0;
     transition: top 0.2s ease-in-out;
     width: 100%;
-    overflow: auto;
+/*    overflow: auto;*/
 }
 
 
@@ -307,7 +301,7 @@ header {
 
 
 
-/*-------------List of Aspects---------*/
+/*------------------------------List of Aspects--------------------------------*/
 
 #hoverLinks{
     text-decoration: none;
