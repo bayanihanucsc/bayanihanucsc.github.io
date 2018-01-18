@@ -145,11 +145,11 @@ body {
     color: white;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
+#sidebar ul li.active > a, #sidebar a[aria-expanded="true"] {
     color: white;
 }
 
-a[data-toggle="collapse"] {
+#links a[data-toggle="collapse"] {
     position: relative;
 }
 
@@ -420,3 +420,23 @@ header {
     top: 0;
     right: 0;
 }
+
+
+/* -------------- FAQ Accordion ------------- */
+
+#accordion {
+    text-align: left;
+}
+
+#accordion a {
+    color: black;
+}
+
+.card {
+    padding: 10px;
+    border: none;
+}
+
+
+
+
