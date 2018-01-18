@@ -4,6 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
 @import url('https://fonts.googleapis.com/css?family=Sriracha');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav');
+@import url('https://fonts.googleapis.com/css?family=Barlow:500');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400i');
+
+@font-face {
+   font-family: myFirstFont;
+   src: url('/Pictures/ailerons.woff');
+}
+
 
 html{
     height: 100%;
@@ -175,8 +185,30 @@ ul ul a {
 
 /*--------------------------------About Page--------------------------------------*/
 
+#title{
+    color: aliceblue;
+    font-family: 'Josefin Sans', sans-serif;
+/*    font-family: 'Josefin Slab', serif;*/
+/*    font-family: myFirstFont;*/
+    font-size: 500%;
+    letter-spacing: 10px;
+    text-align: center;
+    
+}
+
+#Titlesubtext{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: aliceblue;
+    letter-spacing: 2px;
+    font-size: 150%
+}
+
+
 .aspect_bg{
-    background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-180429.jpg');
+/*    background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-180429.jpg');*/
+    
+    background-image: url('/Pictures/bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -192,32 +224,59 @@ ul ul a {
     font-size: 2em;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    
+/*    border-bottom-style: dashed;*/
+    background-color:#F4F9F9;
 }
 
 #mission{
-    padding:10%;
-    font-size: 2em;
+    padding:5% 20% 5% 20%;
+    font-size: 1.2em;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
+    background-color:white;
+    
+}
+
+#statement_desc{
+    color: grey;
 }
 
 .section1{
-    background-color:#DCDCDC;
-    padding: 15em 2em;
+/*    background-color:#F1CBFF;*/
+/*    background-color: #ffe4c4;*/
+    padding: 2em;
 }
 
 .blank{
-    padding: 25%;
+    padding: 20%;
+}
+
+.blank2{
+    padding: 4%;
 }
 
 #statement{
-    font-family: 'Cookie', cursive;
-    font-size: 100px;
+/*    font-family: 'Yantramanav', sans-serif;*/
+    font-family: 'Barlow', sans-serif;
+    font-size: 300%;
+    background-color:white;
+    letter-spacing: 7px;
 }
 
 #events{
     font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+    padding: 5%;
+}
+
+#event_head{
+    font-size: 30px;
+}
+
+.bg-4 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 2%;
 }
 
 /*-------------About Page Nav Bar--------------*/
@@ -227,7 +286,7 @@ ul ul a {
 }
 
 header {
-    background-color: #DCDCDC;
+/*    background-color: #ffe4c4;*/
     height: 50px;
     position: fixed;
     top: 0;
