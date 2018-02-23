@@ -128,3 +128,10 @@ sr.reveal('.mission', {
     origin: 'bottom',
     reset: false
 })
+
+
+//Function for dot navigation
+
+
+
+

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Upcoming Events</title>
+    <title>Aspects</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,77 +15,437 @@
 
     <!--Actual Files      -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <style>
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/*
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Ubuntu", sans-serif;
+  color: #3e3947;
+  background-color: white;
+}
+
+body, html {
+  height: 100%;
+}
+
+a {
+  color: #3e3947;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+*/
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-img-replace {
+   replace text with a background-image 
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+/*
+.cd-section {
+  min-height: 100%;
+  position: relative;
+  padding: 2em 0;
+}
+.cd-section:nth-of-type(odd) {
+  background-color: #3e3947;
+}
+.cd-section:nth-of-type(odd) p {
+  color: #898099;
+}
+.cd-section:nth-of-type(even) {
+  background-color: #745360;
+}
+.cd-section:nth-of-type(even) p {
+  color: #bda3ad;
+}
+.cd-section h1, .cd-section p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+}
+.cd-section h1 {
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.cd-section p {
+  line-height: 1.6;
+}
+@media only screen and (min-width: 768px) {
+  .cd-section h1 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+  .cd-section p {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+
+.cd-scroll-down {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 38px;
+  height: 44px;
+  background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
+}
+*/
+
+/* No Touch devices */
+.cd-nav-trigger {
+  display: none;
+}
+
+.no-touch #cd-vertical-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.no-touch #cd-vertical-nav li {
+  text-align: right;
+}
+.no-touch #cd-vertical-nav a {
+  display: inline-block;
+  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.no-touch #cd-vertical-nav a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.no-touch #cd-vertical-nav a span {
+  float: right;
+  display: inline-block;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+}
+.no-touch #cd-vertical-nav a:hover span {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.no-touch #cd-vertical-nav a:hover .cd-label {
+  opacity: 1;
+}
+.no-touch #cd-vertical-nav a.is-selected .cd-dot {
+  background-color: white;
+}
+.no-touch #cd-vertical-nav .cd-dot {
+  position: relative;
+  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+  top: 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #d88683;
+  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+  transition: transform 0.2s, background-color 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.no-touch #cd-vertical-nav .cd-label {
+  position: relative;
+  margin-right: 10px;
+  padding: .4em .5em;
+  color: white;
+  font-size: 14px;
+  font-size: 0.875rem;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* Touch devices */
+.touch .cd-nav-trigger {
+  display: block;
+  z-index: 2;
+  position: fixed;
+  bottom: 30px;
+  right: 5%;
+  height: 44px;
+  width: 44px;
+  border-radius: 0.25em;
+  background: rgba(255, 255, 255, 0.9);
+}
+.touch .cd-nav-trigger span {
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  background-color: #3e3947;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  border-radius: inherit;
+}
+.touch .cd-nav-trigger span::before {
+  top: -9px;
+}
+.touch .cd-nav-trigger span::after {
+  bottom: -9px;
+}
+
+.touch #cd-vertical-nav {
+  position: fixed;
+  z-index: 1;
+  right: 5%;
+  bottom: 30px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  -o-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border-radius: 0.25em;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.touch #cd-vertical-nav a {
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid rgba(62, 57, 71, 0.1);
+}
+.touch #cd-vertical-nav a span:first-child {
+  display: none;
+}
+.touch #cd-vertical-nav a.is-selected span:last-child {
+  color: #d88683;
+}
+.touch #cd-vertical-nav.open {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger {
+  background-color: transparent;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span {
+  background-color: rgba(62, 57, 71, 0);
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
+  background-color: #3e3947;
+  height: 3px;
+  width: 20px;
+  border-radius: 0;
+  left: -8px;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 1px;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  bottom: 0;
+}
+.touch #cd-vertical-nav li:last-child a {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .touch .cd-nav-trigger, .touch #cd-vertical-nav {
+    bottom: 40px;
+  }
+}
+
+    
+    </style>
+    
 </head>
 
 <body>
-    <div class="wrapper">
+
+<!--    <div class="wrapper">-->
 
         <!-- Sidebar -->
-        <nav id="sidebar">
-
-            <!-- Close Sidebar Button -->
-            <div id="closeSidebar">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </div>
-
-
-            <!-- Sidebar links -->
-            <ul class="list-unstyled links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <!-- Aspect Dropdown Menu -->
-                    <a href="#aspectsSubmenu" data-toggle="collapse" aria-expanded="false">Aspects</a>
-                    <ul class="collapse list-unstyled" id="aspectsSubmenu">
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Alay</a></li>
-                        <li><a href="#">A Step Forward</a></li>
-                        <li><a href="#">Haluan</a></li>
-                        <li><a href="#">HAM</a></li>
-                        <li><a href="#">Isang Himig</a></li>
-                        <li><a href="#">Kuya-Ate Mentorship Program</a></li>
-                        <li><a href="#">Kasama Ballroom Dance Troupe</a></li>
-                        <li><a href="#">Pagkakaisa Dance Troupe</a></li>
-                        <li><a href="#">People Power</a></li>
-                        <li><a href="#">Pilipino Cultural Celebration</a></li>
-                        <li><a href="#">Pilipino Historical Dialogoue</a></li>
-                        <li><a href="#">Tech Crew</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="mahalaya.html">Mahalaya</a>
-                </li>
-                <li>
-                    <a href="faq.html">FAQ</a>
-                </li>
-                <li>
-                    <a href="upcoming.html">Upcoming Events</a>
-                </li>
-            </ul>
-        </nav>
+        
 
         <!-- Page Conent -->
-        <div id="content">
-            <div class="container-fluid">
+          <nav id="cd-vertical-nav">
+		<ul>
+			<li>
+				<a href="#section1" data-number="1">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Intro</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section2" data-number="2">
+					<span class="cd-dot"></span>
+					<span class="cd-label">About</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section3" data-number="3">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Features</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section4" data-number="4">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Portfolio</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section5" data-number="5">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Pricing</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section6" data-number="6">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Contact</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
-                <div class="navbar-header">
-                    <span style="font-size: 30px;cursor: pointer" id="sidebarCollapse">
-                  &#9776;
-               </span>
-                </div>
-            </div>
+	<section id="section1" class="cd-section">
+		<h1>Vertical Fixed Navigation</h1>
+		<a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+	</section><!-- cd-section -->
 
-            <h2 style="text-align: center">Upcoming Events for Bayanihan UCSC</h2>
-        </div>
+	<section id="section2" class="cd-section">
+		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+	</section><!-- cd-section -->
 
+	<section id="section3" class="cd-section">
+		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+	</section><!-- cd-section -->
 
+	<section id="section4" class="cd-section">
+		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+	</section><!-- cd-section -->
+
+	<section id="section5" class="cd-section">
+		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+	</section><!-- cd-section -->
+
+	<section id="section6" class="cd-section">
+		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+	</section><!-- cd-section -->
         <!-- Outside the Page Content div -->
-        <div class="overlay"></div>
-    </div>
+<!--        <div class="overlay"></div>-->
+
+<!--    </div>-->
 
 
     <!-- Optional JavaScript -->
@@ -94,10 +454,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
     <script type="text/javascript" src="js/script.js"></script>
+<!--
     <script type="text/javascript">
         $(document).ready(toggleSidebar);
 
+    </script>
+-->
+    
+    <script>
+    jQuery(document).ready(function($){
+	var contentSections = $('.cd-section'),
+		navigationItems = $('#cd-vertical-nav a');
+
+	updateNavigation();
+	$(window).on('scroll', function(){
+		updateNavigation();
+	});
+
+	//smooth scroll to the section
+	navigationItems.on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+    //smooth scroll to second section
+    $('.cd-scroll-down').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+
+    //open-close navigation on touch devices
+    $('.touch .cd-nav-trigger').on('click', function(){
+    	$('.touch #cd-vertical-nav').toggleClass('open');
+  
+    });
+    //close navigation on touch devices when selectin an elemnt from the list
+    $('.touch #cd-vertical-nav a').on('click', function(){
+    	$('.touch #cd-vertical-nav').removeClass('open');
+    });
+
+	function updateNavigation() {
+		contentSections.each(function(){
+			$this = $(this);
+			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+				navigationItems.eq(activeSection).addClass('is-selected');
+			}else {
+				navigationItems.eq(activeSection).removeClass('is-selected');
+			}
+		});
+	}
+
+	function smoothScroll(target) {
+        $('body,html').animate(
+        	{'scrollTop':target.offset().top},
+        	600
+        );
+	}
+});
+    
     </script>
 
 </body>
