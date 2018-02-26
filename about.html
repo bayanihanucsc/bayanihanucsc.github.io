@@ -97,7 +97,10 @@
                                 <section class="section1" id="parallax--bg">
 
                                     <div id="whoarewe">
-                                        Bayanihan is a student led organization at UC Santa Cruz. We strive for....
+                                        Bayanihan is a student led organization at UC Santa Cruz. <br /> <br />
+                                        <div id="whoarewe2">
+                                            We invite you to give whatever input you can in Bayanihan by participating when and where you are able. Your individual support is valuable and essential if the needs of our community are to be truly addressed and given a voice.
+                                        </div>
                                     </div>
 
                                     <div id="mission">
@@ -108,7 +111,8 @@
 
                                         <p id="statement_desc">
 
-                                            "The mission of Bayanihan is to be a support organization that promotes unity and empowerment through the awareness of our diverse community. It strives to be a cultural resource for the community as well as to foster open forum based on mutual respect and understanding. Bayanihan works to promote a greater understanding and appreciation of the Filipino and Filipino-American experience through meetings and events that explore our identity, history, and culture."
+                                            "The mission of Bayanihan is to be a support organization that promotes unity and empowerment through the awareness of our diverse community. It strives to be a cultural resource for the community as well as to foster open forum based on mutual respect
+                                            and understanding. Bayanihan works to promote a greater understanding and appreciation of the Filipino and Filipino-American experience through meetings and events that explore our identity, history, and culture."
 
                                         </p>
 
@@ -132,7 +136,8 @@
                                     <div id="calendar">
                                         <p id="ev_title">Upcoming Events</p>
                                         <br>
-                                        <iframe src="https://calendar.google.com/calendar/b/2/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcccc&amp;src=bayanihan.ucsc%40gmail.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:5" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+                                        <iframe src="https://calendar.google.com/calendar/b/2/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcccc&amp;src=bayanihan.ucsc%40gmail.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:5"
+                                            width="500" height="500" frameborder="0" scrolling="no"></iframe>
                                     </div>
 
 
@@ -140,22 +145,56 @@
                             </div>
 
                             <div class="col-md-6">
-                                <section class="section1" id="parallax--bg">
-
-                                    <div id="mission">
-
-                                        <p id="statement">
-                                            FILLER
-                                        </p>
-
-                                        <p id="statement_desc">
-
-                                            "The mission of Bayanihan is to be a support organization that promotes unity and empowerment through the awareness of our diverse community. It strives to be a cultural resource for the community as well as to foster open forum based on mutual respect and understanding. Bayanihan works to promote a greater understanding and appreciation of the Filipino and Filipino-American experience through meetings and events that explore our identity, history, and culture."
-
-                                        </p>
-
+                                
+                                <section class="faq" id="parallax--bg">
+                                    <div id = "faq">
+                                        <p id="faq_title">FAQ</p>
+                                     <dl>
+                                        <dt>Where is the Bayanihan Office located?</dt>
+                                        <dd>
+                                            <p>The Bayanihan office is located in the Redwood Lounge above the Student Union Association (SUA) office. It the building across from the UC Santa Cruz Bay Tree Bookstore.</p>
+                                        </dd>
+                                        <dt>Do I have to be Pilipinx to join?</dt>
+                                        <dd>
+                                            <p>No you do not! Anyone is welcome in our community!</p>
+                                        </dd>
+                                        <dt>When are your meetings?</dt>
+                                        <dd>
+                                            <p>Unlike most orgs on campus, we do not have weekly meetings. Rather we have bi-weekly meetings! </p>
+                                        </dd>
+                                        <dt>How do i get involved?</dt>
+                                        <dd>
+                                            <p>Firstly, join our facebook page! You can see all important announcements and upcoming events there!</p>
+                                        </dd>
+                                    </dl>
                                     </div>
+
                                 </section>
+<!--
+                                <section class="faq" id="parallax--bg">
+                                    <div>
+                                    <dl>
+                                        <dt>Where is the Bayanihan Office loacted?</dt>
+                                        <dd>
+                                            <p>The Bayanihan office is located in the Redwood Lounge above the Student Union Association (SUA) office. It the building across from the UC Santa Cruz Bay Tree Bookstore.</p>
+                                        </dd>
+                                        <dt>Wherefore art thou Romeo?</dt>
+                                        <dd>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam incidunt itaque mollitia eligendi, doloribus commodi a culpa ratione aspernatur!</p>
+                                        </dd>
+                                        <dt>How did I get here?</dt>
+                                        <dd>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam incidunt itaque mollitia eligendi, doloribus commodi a culpa ratione aspernatur!</p>
+                                        </dd>
+                                        <dt>Why am I doing this?</dt>
+                                        <dd>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae rerum molestiae laboriosam nobis odit.</p>
+                                        </dd>
+                                    </dl>
+                                        </div>
+
+                                </section>
+-->
                             </div>
 
                         </div>
@@ -260,7 +299,15 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
         $(document).ready(toggleSidebar);
+    </script>
 
+    <script>
+        (function(){
+      $('dl').on('click', 'dt', function() {
+          $(this).next().toggleClass('expand');
+          $(this).toggleClass('expand');
+      });
+    })();
     </script>
 
 </body>

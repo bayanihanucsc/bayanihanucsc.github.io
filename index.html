@@ -97,7 +97,10 @@
                                 <section class="section1" id="parallax--bg">
 
                                     <div id="whoarewe">
-                                        Bayanihan is a student led organization at UC Santa Cruz. We strive for....
+                                        Bayanihan is a student led organization at UC Santa Cruz. <br /> <br />
+                                        <div id="whoarewe2">
+                                            We invite you to give whatever input you can in Bayanihan by participating when and where you are able. Your individual support is valuable and essential if the needs of our community are to be truly addressed and given a voice.
+                                        </div>
                                     </div>
 
                                     <div id="mission">
@@ -108,7 +111,8 @@
 
                                         <p id="statement_desc">
 
-                                            "The mission of Bayanihan is to be a support organization that promotes unity and empowerment through the awareness of our diverse community. It strives to be a cultural resource for the community as well as to foster open forum based on mutual respect and understanding. Bayanihan works to promote a greater understanding and appreciation of the Filipino and Filipino-American experience through meetings and events that explore our identity, history, and culture."
+                                            "The mission of Bayanihan is to be a support organization that promotes unity and empowerment through the awareness of our diverse community. It strives to be a cultural resource for the community as well as to foster open forum based on mutual respect
+                                            and understanding. Bayanihan works to promote a greater understanding and appreciation of the Filipino and Filipino-American experience through meetings and events that explore our identity, history, and culture."
 
                                         </p>
 
@@ -132,7 +136,8 @@
                                     <div id="calendar">
                                         <p id="ev_title">Upcoming Events</p>
                                         <br>
-                                        <iframe src="https://calendar.google.com/calendar/b/2/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcccc&amp;src=bayanihan.ucsc%40gmail.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:5" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+                                        <iframe src="https://calendar.google.com/calendar/b/2/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcccc&amp;src=bayanihan.ucsc%40gmail.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:5"
+                                            width="500" height="500" frameborder="0" scrolling="no"></iframe>
                                     </div>
 
 
@@ -140,21 +145,34 @@
                             </div>
 
                             <div class="col-md-6">
-                                <section class="section1" id="parallax--bg">
-
-                                    <div id="mission">
-
-                                        <p id="statement">
-                                            FILLER
-                                        </p>
-
-                                        <p id="statement_desc">
-
-                                            "The mission of Bayanihan is to be a support organization that promotes unity and empowerment through the awareness of our diverse community. It strives to be a cultural resource for the community as well as to foster open forum based on mutual respect and understanding. Bayanihan works to promote a greater understanding and appreciation of the Filipino and Filipino-American experience through meetings and events that explore our identity, history, and culture."
-
-                                        </p>
-
+                                
+                                <section class="faq" id="parallax--bg">
+                                    <div id = "faq">
+                                        <p id="faq_title">FAQ</p>
+                                     <dl>
+                                        <dt>What happened to FSA?</dt>
+                                        <dd>
+                                            <p>Yes</p>
+                                        </dd>
+                                        <dt>Where is the Bayanihan Office located?</dt>
+                                        <dd>
+                                            <p>The Bayanihan office is located in the Redwood Lounge above the Student Union Association (SUA) office. It the building across from the UC Santa Cruz Bay Tree Bookstore.</p>
+                                        </dd>
+                                        <dt>Do I have to be Pilipinx to join?</dt>
+                                        <dd>
+                                            <p>No you do not! Anyone is welcome in our community!</p>
+                                        </dd>
+                                        <dt>When are your meetings?</dt>
+                                        <dd>
+                                            <p>Unlike most orgs on campus, we do not have weekly meetings. Rather we have bi-weekly meetings! </p>
+                                        </dd>
+                                        <dt>How do i get involved?</dt>
+                                        <dd>
+                                            <p>Firstly, join our facebook page! You can see all important announcements and upcoming events there!</p>
+                                        </dd>
+                                    </dl>
                                     </div>
+
                                 </section>
                             </div>
 
@@ -174,7 +192,7 @@
 
                         <div class="row">
                             <div class="col-lg-12">
-                                <section class="section1" id="parallax--bg">
+                                <section class="section3" id="parallax--bg">
                                     <div style="text-align: center" id="events">
                                         <div class="w3-content w3-display-container">
                                             <img class="mySlides" src="/Pictures/slide1.jpg" style="width:100%">
@@ -210,8 +228,16 @@
 
                         <div class="row">
 
-                            <footer class="container-fluid bg-4 text-center">
-                                <p>Bayanihan</p>
+                            <footer class="container-fluid bg-4 text-center" id = "footerbg">
+                                
+                                <div class="footer-social-icons">
+                                    <h4 class="_14">Follow us on</h4>
+                                    <ul class="social-icons">
+                                        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
                             </footer>
 
 
@@ -260,7 +286,15 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
         $(document).ready(toggleSidebar);
+    </script>
 
+    <script>
+        (function(){
+      $('dl').on('click', 'dt', function() {
+          $(this).next().toggleClass('expand');
+          $(this).toggleClass('expand');
+      });
+    })();
     </script>
 
 </body>
