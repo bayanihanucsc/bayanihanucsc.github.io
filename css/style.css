@@ -1049,29 +1049,13 @@
 
      
 }
-/*
-	background: white;
-	display: inline;
-	float: left;
-	margin: 0 15px 30px;
-	padding: 10px 10px 25px;
-	text-align: center;
-	text-decoration: none;
-	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
-	box-shadow: 0 4px 6px rgba(0,0,0,.3);
-	-webkit-transition: all .15s linear;
-	-moz-transition: all .15s linear;
-	transition: all .15s linear;
-	z-index:0;
-        position:relative; 
-*/
 
- .polaroid p {
-     position: inherit;
+
+ .caption {
+     position: absolute;   
      text-align: center;
      width: 100%;
-     bottom: 60px;
+     bottom: 0px;
      font-family: 'Dancing Script', cursive;
      font-size: 125%;
      letter-spacing: 1.2px;
@@ -1079,11 +1063,11 @@
  .board{
 /*     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Pebbleswithquarzite.jpg/1200px-Pebbleswithquarzite.jpg");*/
     
-/*     background-image: url("http://www.printawallpaper.com/upload/designs/bawtext_d.jpg");*/
+     background-image: url("http://www.printawallpaper.com/upload/designs/bawtext_d.jpg");
 /*     background-image: url("http://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-basket-weave-texture.jpg");*/
      
      /* test background for my own purposes*/
-     background-image: url("https://i.imgur.com/MQe61KH.jpg");
+/*     background-image: url("https://i.imgur.com/MQe61KH.jpg");*/
      
      background-attachment: fixed;
      background-size: cover;
@@ -1102,7 +1086,6 @@
      position: absolute;
      top: 0;
      left: 0;
-     z-index: 99;
     /* padding: 5px;
     */
 }
@@ -1112,6 +1095,9 @@
     
 }
 
+.card:hover .caption{
+    bottom: -20px;
+}
 
 /*Footer*/
 a {
