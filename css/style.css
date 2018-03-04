@@ -1060,7 +1060,8 @@
 /*     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Pebbleswithquarzite.jpg/1200px-Pebbleswithquarzite.jpg");*/
     
 /*     background-image: url("http://www.printawallpaper.com/upload/designs/bawtext_d.jpg");*/
-     background-image: url("http://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-basket-weave-texture.jpg");
+/*     background-image: url("http://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-basket-weave-texture.jpg");*/
+     background-color: dimgray;
     
      background-attachment: fixed;
      background-size: cover;
@@ -1170,3 +1171,15 @@ ul.social-icons {
 .fa-youtube:hover {
     background-color: #e64a41;
 }
+
+/*//Instagram Feed*/
+.insta{
+    padding: 10em;
+}
+
+#insta{
+    padding: 5em;
+     background-color: white;
+}
+
+
