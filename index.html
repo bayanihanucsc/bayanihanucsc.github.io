@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -21,65 +21,40 @@
 </head>
 
 <body id="all">
+
     <div class="wrapper">
 
-        <!-- Sidebar -->
-        <nav id="sidebar">
-
-            <!-- Close Sidebar Button -->
-            <div id="closeSidebar">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </div>
-
-
-            <!-- Sidebar links -->
-            <ul class="list-unstyled links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <!--
-                     Aspect Dropdown Menu 
-                    <a href="#aspectsSubmenu" data-toggle="collapse" aria-expanded="false">Aspects</a>
-                    <ul class="collapse list-unstyled" id="aspectsSubmenu">
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Alay</a></li>
-                        <li><a href="#">A Step Forward</a></li>
-                        <li><a href="#">Haluan</a></li>
-                        <li><a href="#">HAM</a></li>
-                        <li><a href="#">Isang Himig</a></li>
-                        <li><a href="#">Kuya-Ate Mentorship Program</a></li>
-                        <li><a href="#">Kasama Ballroom Dance Troupe</a></li>
-                        <li><a href="#">Pagkakaisa Dance Troupe</a></li>
-                        <li><a href="#">People Power</a></li>
-                        <li><a href="#">Pilipino Cultural Celebration</a></li>
-                        <li><a href="#">Pilipino Historical Dialogoue</a></li>
-                        <li><a href="#">Tech Crew</a></li>
-                    </ul>
--->
-                    <a href="aspects.html">Aspects</a>
-                </li>
-
-                <li>
-                    <a href="board.html">Coordinators</a>
-                </li>
-
-                <li>
-                    <a href="mahalaya.html">Mahalaya</a>
-                </li>
-                <li>
-                    <a href="faq.html">FAQ</a>
-                </li>
-                <li>
-                    <a href="upcoming.html">Upcoming Events</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aspects.html">ASPECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="board.html">COORDINATORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mahalaya.html">MAHALAYA</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="upcoming.html">UPCOMING</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQs</a>
+                    </li>  
+                </ul>
+            </div>  
         </nav>
-
-
+        
         <!-- Page Content -->
         <section class="top">
 
@@ -154,7 +129,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row" id="yes">
                             <div class="col-md-6">
                                 <section class="section1" id="parallax--bg">
 
@@ -265,36 +240,11 @@
                                 </div>
                             </footer>
 
-
-
                         </div>
-
-
                     </div>
                 </section>
-
-
-                <!--        Nav Bar Code placed here so it appears above content      -->
-                <header class="container-fluid nav-down">
-
-                    <div class="navbar-header">
-                        <span style="font-size: 30px;cursor: pointer" id="sidebarCollapse">
-                      &#9776;
-                   </span>
-                    </div>
-                </header>
-
             </div>
-
-
-
-
         </section>
-
-        <!-- Outside the Page Content div -->
-        <div class="overlay"></div>
-
-
 
     </div>
 
@@ -306,7 +256,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
