@@ -84,8 +84,16 @@
                 </div>
 
             </section>
-            
-<!--          
+
+
+            <section class="aspect_description">
+                <div class="container-fluid">
+                    <p id="aspect_descript">
+                        What is an aspect? An aspect is a part of Bayanihan that you can join! Idk what to put here lmao filler filler filler filler filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler filler</p>
+                </div>
+
+
+                
                 <div id="accordion" role="tablist">
                     
                     <div class="card">
@@ -150,7 +158,10 @@
                         </div>
                     </div>
                 </div>
--->
+
+            </section>
+
+
         </div>
 
   
@@ -163,9 +174,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(toggleSidebar);
-
+    <script>
+        (function(){
+      $('dl').on('click', 'dt', function() {
+          $(this).next().toggleClass('expand');
+          $(this).toggleClass('expand');
+      });
+    })();
     </script>
 
 </body>
