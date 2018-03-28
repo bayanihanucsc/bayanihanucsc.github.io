@@ -1,20 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 @import url('https://fonts.googleapis.com/css?family=Cookie');
- @import url('https://fonts.googleapis.com/css?family=Marck+Script');
- @import url('https://fonts.googleapis.com/css?family=Unica+One');
- @import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
- @import url('https://fonts.googleapis.com/css?family=Sriracha');
- @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
- @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
- @import url('https://fonts.googleapis.com/css?family=Yantramanav');
- @import url('https://fonts.googleapis.com/css?family=Barlow:500');
- @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400i');
- @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
- @font-face {
-     font-family: myFirstFont;
-     src: url('/Pictures/ailerons.woff');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+@import url('https://fonts.googleapis.com/css?family=Sriracha');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav');
+@import url('https://fonts.googleapis.com/css?family=Barlow:500');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400i');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('/Pictures/ailerons.woff');
 }
+
+/* nav bar */
+nav {
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+    font-size: 15px;
+}
+
+
  html{
      height: 100%;
 }
@@ -51,32 +67,15 @@
     /* position:fixed;
     */
 }
- #nav{
-     list-style: none;
-     text-align: center;
-    /* color:red;
-    */
-     font-family: 'Unica One', cursive;
-     font-size: 1.75em;
-}
- .nav1 li a{
-     color:black;
-     transition: 0.3s;
-}
- .nav1 a:hover {
-     text-decoration: none;
-     list-style: none;
-     text-align: center;
-     position: relative;
-     color:white;
-}
 /* ------------ Other webpages (not homepage) ------------*/
  .wrapper {
      display: block;
     /*align-items: stretch;
     */
 }
-/* ------------ Sidebar ------------ */
+
+/*
+------------ Sidebar ------------
  #sidebar {
      font-family: 'Unica One', cursive;
      background-color: beige;
@@ -87,12 +86,13 @@
      left: -200px;
      z-index: 999;
      transition: 0.4s;
-/*     overflow-y: scroll;*/
+     overflow-y: scroll;
 }
  #sidebar.active {
      left: 0;
 }
-/* 'close sidebar' button */
+
+'close sidebar' button
  #closeSidebar {
      width: 35px;
      height: 35px;
@@ -109,7 +109,7 @@
  #closeSidebar:hover {
      color: white;
 }
-/* padding for entire sidebar (top part only to center content of sidebar) */
+padding for entire sidebar (top part only to center content of sidebar)
  #sidebar ul.links {
      padding-top: 60px;
 }
@@ -130,7 +130,6 @@
  #links a[data-toggle="collapse"] {
      position: relative;
 }
-/* Changes the caret (down or up) depending on the value of aria-expanded */
  a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
      font-family: FontAwesome;
      content: '\f0d7';
@@ -156,6 +155,7 @@
      opacity: 0.6;
      z-index: 1;
 }
+*/
 /*--------------------------------About Page--------------------------------------*/
  #title{
      color: aliceblue;
@@ -217,17 +217,12 @@
      background-color: white;
      text-align: center;
      position: relative;
-     padding-bottom: 75%;
-     height: 0;
+/*     padding-bottom: 100%;*/
+/*     height: 0;*/
      overflow: hidden;
 }
- #calendar iframe {
-     position:absolute;
-     top:15%;
-     left: 10%;
-     width: 80%;
-     height: 80%;
-}
+
+
  #ev_title{
      font-size: 2em;
      text-align: center;
@@ -424,14 +419,15 @@
     background-color: white;
 /*    position: fixed;*/
 /*    overflow-y: scroll;*/
-    max-height:607px;
-    
+    max-height:485px;
+
 }
+
+
 
 .faq{
     padding:2em;
    
-
 }
 
 #faq_title{
@@ -506,6 +502,7 @@
 }
 
 
+<<<<<<< HEAD
 /*TEST*/
 /*
  * {
@@ -683,6 +680,8 @@
 /*     background-color: #CDCDCD;*/
      background-color: darkgray;
 }
+=======
+>>>>>>> 44f612d3ae8b5c6c0cb0d98f0178465a65b9eba7
 
 /*dot navigation*/
 /* -------------------------------- Primary style -------------------------------- */
@@ -1039,20 +1038,16 @@
      border: 15px solid #fff;
      border-bottom: 70px solid #fff;
 /*    margin: 0 15px 30px;*/
-     
-/*    padding: 10px 10px 25px;*/
-     
+
      -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
      box-shadow: 3px 3px 3px #777;
      -webkit-transition: all .15s linear;
      -moz-transition: all .15s linear;
      transition: all .15s linear;
- 
-      
+     
 }
- 
- 
+
  .caption {
      position: absolute;   
      text-align: center;
@@ -1065,10 +1060,12 @@
  .board{
 /*     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Pebbleswithquarzite.jpg/1200px-Pebbleswithquarzite.jpg");*/
     
-/*     background-image: url("http://www.printawallpaper.com/upload/designs/bawtext_d.jpg");*/
+     background-image: url("http://www.printawallpaper.com/upload/designs/bawtext_d.jpg");
 /*     background-image: url("http://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-basket-weave-texture.jpg");*/
-     background-color: dimgray;
-    
+     
+     /* test background for my own purposes*/
+/*     background-image: url("https://i.imgur.com/MQe61KH.jpg");*/
+     
      background-attachment: fixed;
      background-size: cover;
 }
@@ -1092,13 +1089,11 @@
  .card:hover .img-top{
      display: block;
 /*     padding: 5px;*/
-     
-}
- 
-.card:hover .caption{
-    bottom: -20px;
 }
 
+.card:hover .caption {
+    bottom: -20px;
+}
 
 /*Footer*/
 a {

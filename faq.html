@@ -8,83 +8,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Actual Files      -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <body>
     <div class="wrapper">
 
         <!-- Sidebar -->
-        <nav id="sidebar">
-
-            <!-- Close Sidebar Button -->
-            <div id="closeSidebar">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </div>
-
-
-            <!-- Sidebar links -->
-            <ul class="list-unstyled links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-
-                <li>
-                    <!-- Aspect Dropdown Menu -->
-                    <a href="#aspectsSubmenu" data-toggle="collapse" aria-expanded="false">Aspects</a>
-                    <ul class="collapse list-unstyled" id="aspectsSubmenu">
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Alay</a></li>
-                        <li><a href="#">A Step Forward</a></li>
-                        <li><a href="#">Haluan</a></li>
-                        <li><a href="#">HAM</a></li>
-                        <li><a href="#">Isang Himig</a></li>
-                        <li><a href="#">Kuya-Ate Mentorship Program</a></li>
-                        <li><a href="#">Kasama Ballroom Dance Troupe</a></li>
-                        <li><a href="#">Pagkakaisa Dance Troupe</a></li>
-                        <li><a href="#">People Power</a></li>
-                        <li><a href="#">Pilipino Cultural Celebration</a></li>
-                        <li><a href="#">Pilipino Historical Dialogoue</a></li>
-                        <li><a href="#">Tech Crew</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="mahalaya.html">Mahalaya</a>
-                </li>
-
-                <li>
-                    <a href="faq.html">FAQ</a>
-                </li>
-
-                <li>
-                    <a href="upcoming.html">Upcoming Events</a>
-                </li>
-
-            </ul>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aspects.html">ASPECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="board.html">COORDINATORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mahalaya.html">MAHALAYA</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="upcoming.html">UPCOMING</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faq.html">FAQs</a>
+                    </li>  
+                </ul>
+            </div>  
         </nav>
 
         <!-- Page Conent -->
         <div id="content">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <span style="font-size: 30px;cursor: pointer" id="sidebarCollapse">
-                  &#9776;
-               </span>
+            <section class="faq" id="parallax--bg">
+                <div id = "faq">
+                    <p id="faq_title">FAQ</p>
+                 <dl>
+                    <dt>What happened to FSA?</dt>
+                    <dd>
+                        <p>Yes</p>
+                    </dd>
+                    <dt>Where is the Bayanihan Office located?</dt>
+                    <dd>
+                        <p>The Bayanihan office is located in the Redwood Lounge above the Student Union Association (SUA) office. It the building across from the UC Santa Cruz Bay Tree Bookstore.</p>
+                    </dd>
+                    <dt>Do I have to be Pilipinx to join?</dt>
+                    <dd>
+                        <p>No you do not! Anyone is welcome in our community!</p>
+                    </dd>
+                    <dt>When are your meetings?</dt>
+                    <dd>
+                        <p>Unlike most orgs on campus, we do not have weekly meetings. Rather we have bi-weekly meetings! </p>
+                    </dd>
+                    <dt>How do i get involved?</dt>
+                    <dd>
+                        <p>Firstly, join our facebook page! You can see all important announcements and upcoming events there!</p>
+                    </dd>
+                </dl>
                 </div>
-            </div>
 
-            <h2 style="text-align: center" id="aspect_title" class="FAQ">Frequently Asked Questions</h2>
+            </section>
+
 
             <section class="aspect_description">
                 <div class="container-fluid">
@@ -92,10 +92,10 @@
                         What is an aspect? An aspect is a part of Bayanihan that you can join! Idk what to put here lmao filler filler filler filler filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler fillerfiller filler filler</p>
                 </div>
 
-                <!-- FAQ section -->
+
+                
                 <div id="accordion" role="tablist">
                     
-                    <!-- #1 -->
                     <div class="card">
                         <div class="card-header" role="tab" id="headingOne">
                             <h5 class="mb-0">
@@ -109,7 +109,6 @@
                         </div>
                     </div>
 
-                    <!-- #2 -->
                     <div class="card">
                         <div class="card-header" role="tab" id="headingTwo">
                             <h5 class="mb-0">
@@ -123,7 +122,6 @@
                         </div>
                     </div>
 
-                    <!-- #3 -->
                     <div class="card">
                         <div class="card-header" role="tab" id="headingThree">
                             <h5 class="mb-0">
@@ -137,7 +135,6 @@
                         </div>
                     </div>
 
-                    <!-- #4 -->
                     <div class="card">
                         <div class="card-header" role="tab" id="headingFour">
                             <h5 class="mb-0">
@@ -160,16 +157,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
             </section>
 
 
         </div>
 
-        <!-- Outside the Page Content div -->
-        <div class="overlay"></div>
-
-    </div>
+  
 
 
     <!-- Optional JavaScript -->
@@ -179,9 +174,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(toggleSidebar);
-
+    <script>
+        (function(){
+      $('dl').on('click', 'dt', function() {
+          $(this).next().toggleClass('expand');
+          $(this).toggleClass('expand');
+      });
+    })();
     </script>
 
 </body>
