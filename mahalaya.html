@@ -185,16 +185,19 @@
         <p>Tech Crew</p>
     </section>
     <!-- cd-section -->
+<!--
     <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+-->
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
@@ -202,59 +205,60 @@
     <script type="text/javascript">
         $(document).ready(toggleSidebar);
     </script>
+-->
 
     <!--    <script  src="js/index.js"></script>-->
 
     <script>
         jQuery(document).ready(function($){
-    	var contentSections = $('.cd-section'),
-    		navigationItems = $('#cd-vertical-nav a');
-    
-    	updateNavigation();
-    	$(window).on('scroll', function(){
-    		updateNavigation();
-    	});
-    
-    	//smooth scroll to the section
-    	navigationItems.on('click', function(event){
-            event.preventDefault();
-            smoothScroll($(this.hash));
-        });
-        //smooth scroll to second section
-        $('.cd-scroll-down').on('click', function(event){
-            event.preventDefault();
-            smoothScroll($(this.hash));
-        });
-    
-        //open-close navigation on touch devices
-        $('.touch .cd-nav-trigger').on('click', function(){
-        	$('.touch #cd-vertical-nav').toggleClass('open');
-      
-        });
-        //close navigation on touch devices when selectin an elemnt from the list
-        $('.touch #cd-vertical-nav a').on('click', function(){
-        	$('.touch #cd-vertical-nav').removeClass('open');
-        });
-    
-    	function updateNavigation() {
-    		contentSections.each(function(){
-    			$this = $(this);
-    			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
-    			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
-    				navigationItems.eq(activeSection).addClass('is-selected');
-    			}else {
-    				navigationItems.eq(activeSection).removeClass('is-selected');
-    			}
-    		});
-    	}
-    
-    	function smoothScroll(target) {
-            $('body,html').animate(
-            	{'scrollTop':target.offset().top},
-            	600
-            );
-    	}
+	var contentSections = $('.cd-section'),
+		navigationItems = $('#cd-vertical-nav a');
+
+	updateNavigation();
+	$(window).on('scroll', function(){
+		updateNavigation();
+	});
+
+	//smooth scroll to the section
+	navigationItems.on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
     });
+    //smooth scroll to second section
+    $('.cd-scroll-down').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+
+    //open-close navigation on touch devices
+    $('.touch .cd-nav-trigger').on('click', function(){
+    	$('.touch #cd-vertical-nav').toggleClass('open');
+  
+    });
+    //close navigation on touch devices when selectin an elemnt from the list
+    $('.touch #cd-vertical-nav a').on('click', function(){
+    	$('.touch #cd-vertical-nav').removeClass('open');
+    });
+
+	function updateNavigation() {
+		contentSections.each(function(){
+			$this = $(this);
+			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+				navigationItems.eq(activeSection).addClass('is-selected');
+			}else {
+				navigationItems.eq(activeSection).removeClass('is-selected');
+			}
+		});
+	}
+
+	function smoothScroll(target) {
+        $('body,html').animate(
+        	{'scrollTop':target.offset().top},
+        	600
+        );
+	}
+});
     </script>
 
 
