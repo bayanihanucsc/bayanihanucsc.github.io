@@ -719,6 +719,17 @@ padding for entire sidebar (top part only to center content of sidebar)
      white-space: nowrap;
 }
 /* -------------------------------- Main components -------------------------------- */
+
+.aspect_text_title{
+    font-family: 'Josefin Slab', serif;
+}
+
+.aspect_text_title em{
+    font-size: 300%;
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
+}
+
  .cd-section {
      min-height: 100%;
      position: relative;
@@ -728,28 +739,83 @@ padding for entire sidebar (top part only to center content of sidebar)
      background-color: #3e3947;
 }
  #section1{
-     background-image: url("http://cdn.skim.gs/images/iv8zuuofexaoeuuntasb/overcoming-fear-of-dogs");
+     background-image: url(/Pictures/OPERS.jpg);
      background-size: cover;
      background-attachment: fixed;
 }
  .cd-section:nth-of-type(odd) p {
-     color: #898099;
+     color: white;
 }
  #section2{
-     background-image: url(/Pictures/slide4.jpg);
+     background-image: url(/Pictures/Aspect_BG_Pics/slide4.jpg);
+     background-position: center;
      background-size: cover;
      background-attachment: fixed;
 }
  #section3{
-     background-image: url("https://avante.biz/wp-content/uploads/Cute-Dogs-Pictures-Wallpapers/Cute-Dogs-Pictures-Wallpapers-001.jpg");
+     background-image: url(/Pictures/Aspect_BG_Pics/Alay_anth.jpg);
      background-size: cover;
      background-attachment: fixed;
 }
+
+ #section5{
+     background-image: url(/Pictures/Aspect_BG_Pics/Haluan_performance.jpg);
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+}
+
+#section7{
+    background-image: url(/Pictures/Aspect_BG_Pics/IH_performance2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section8{
+    background-image: url(/Pictures/Aspect_BG_Pics/KAMP.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section9{
+    background-image: url(/Pictures/Aspect_BG_Pics/Kasama_Pic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section10{
+    background-image: url(/Pictures/Aspect_BG_Pics/PDT_performance.JPG);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section11{
+    background-image: url(/Pictures/Aspect_BG_Pics/PP_performance.JPG);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section12{
+    background-image: url(/Pictures/Aspect_BG_Pics/PHD_class.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section13{
+    background-image: url(/Pictures/Aspect_BG_Pics/Tech_stuff.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
  .cd-section:nth-of-type(even) {
      background-color: #745360;
 }
  .cd-section:nth-of-type(even) p {
-     color: #bda3ad;
+     color: white;
 }
  .cd-section h1, .cd-section p {
      position: absolute;
@@ -765,6 +831,7 @@ padding for entire sidebar (top part only to center content of sidebar)
      width: 90%;
      max-width: 768px;
      text-align: center;
+     
 }
  .cd-section h1 {
      color: white;
