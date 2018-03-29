@@ -87,12 +87,19 @@
 
                 <section>
                     <div class="mission">
+                        
                         <div class="row">
                             <div class="col-lg-12">
                                 <section class="blank" id="parallax--bg">
                                     <h1 id="title">BAYANIHAN</h1>
                                     <p id="Titlesubtext"> at UC Santa Cruz </p>
+                                    <section id="section07" class="demo test">
+                                  
+                                      <a href="#whoarewe"><span></span><span></span><span></span>Scroll</a>
+                                    </section>
                                 </section>
+                                
+                                
                             </div>
                         </div>
 
@@ -273,7 +280,15 @@
     </div>
 
 
-
+    <script>
+    $(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+    
+    </script>
 
 
 
