@@ -1109,9 +1109,9 @@ padding for entire sidebar (top part only to center content of sidebar)
      -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
      box-shadow: 3px 3px 3px #777;
-     -webkit-transition: all .15s linear;
-     -moz-transition: all .15s linear;
-     transition: all .15s linear;
+     -webkit-transition: all .01s linear;
+     -moz-transition: all .01s linear;
+     transition: all .01s linear;
      
 }
 
