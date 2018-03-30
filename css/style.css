@@ -718,8 +718,16 @@ padding for entire sidebar (top part only to center content of sidebar)
 }
 /* -------------------------------- Main components -------------------------------- */
 
+
+
+
 .aspect_text_title{
     font-family: 'Josefin Slab', serif;
+    background-color: rgba(32,32,32,0.6);
+    border-style:groove;
+    border-width: thick;
+    border-color:antiquewhite;
+    padding: .5em;
 }
 
 .aspect_text_title em{

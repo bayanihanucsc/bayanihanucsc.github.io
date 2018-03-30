@@ -57,23 +57,27 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">HOME</a>
                     </li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
+-->
                     <li class="nav-item">
                         <a class="nav-link" href="aspects.html">ASPECTS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="board.html">COORDINATORS</a>
                     </li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="mahalaya.html">MAHALAYA</a>
                     </li>  
+-->
                     <li class="nav-item">
-                        <a class="nav-link" href="upcoming.html">UPCOMING</a>
+                        <a class="nav-link" href="upcoming.html">PCC</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQs</a>
+                        <a class="nav-link" href="faq.html">RESOURCES</a>
                     </li>  
                 </ul>
             </div>  
@@ -88,20 +92,20 @@
                 <section>
                     <div class="mission">
                         
-                        <div class="row">
-                            <div class="col-lg-12">
+                        <section class="company-heading intro-type" id="parallax-one">
+                          <div class="container">
+                            <div class="row product-title-info">
+                              <div class="col-md-12">
                                 <section class="blank" id="parallax--bg">
                                     <h1 id="title">BAYANIHAN</h1>
                                     <p id="Titlesubtext"> at UC Santa Cruz </p>
-                                    <section id="section07" class="demo test">
-                                  
-                                      <a href="#whoarewe"><span></span><span></span><span></span>Scroll</a>
-                                    </section>
                                 </section>
-                                
-                                
+                                <a class="ct-btn-scroll ct-js-btn-scroll" href="#whoarewe"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+                              </div>
                             </div>
-                        </div>
+                          </div>
+                          <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/anchor/company-hero2.jpg);"></div>
+                        </section>
 
                         <div class="row">
                             <div class="col-lg-12">
@@ -280,14 +284,20 @@
     </div>
 
 
-    <script>
-    $(function() {
-  $('a[href*=#]').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+     <script>
+    $(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
   });
 });
-    
     </script>
 
 
