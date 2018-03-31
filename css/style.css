@@ -1484,7 +1484,7 @@ figure {
 }
 
 #mission_pcc{
-     padding:10% 15% 5% 15%;
+     padding:7% 15% 5% 15%;
      font-size: 350%;
      text-align: center;
      font-family: 'Abril Fatface', cursive;     
@@ -1536,6 +1536,15 @@ figure {
     border-left-style: double;
     border-right-width: thick;
     border-right-style: double;
+    color: dimgray;
+    font-style: italic;
+}
+
+#show_desc_2{
+    padding: 5%;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
     color: dimgray;
     font-style: italic;
 }
