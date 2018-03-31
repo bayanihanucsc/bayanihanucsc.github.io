@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Aspects</title>
+    <title>About</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,497 +18,318 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    
-    <style>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-/* -------------------------------- 
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-Primary style
 
--------------------------------- */
-/*
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    <!-- FullCalendar dependencies   -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.css' rel='stylesheet' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='js/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js'></script>
+    <script src='/gcal.min.js'></script>
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+    <script>
+        $(document).ready(function() {
+            // page is now ready, initialize the calendar...
 
-body {
-  font-size: 100%;
-  font-family: "Ubuntu", sans-serif;
-  color: #3e3947;
-  background-color: white;
-}
-
-body, html {
-  height: 100%;
-}
-
-a {
-  color: #3e3947;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
-*/
-
-/* -------------------------------- 
-
-Modules - reusable parts of our design
-
--------------------------------- */
-.cd-img-replace {
-   replace text with a background-image 
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-}
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-/*
-.cd-section {
-  min-height: 100%;
-  position: relative;
-  padding: 2em 0;
-}
-.cd-section:nth-of-type(odd) {
-  background-color: #3e3947;
-}
-.cd-section:nth-of-type(odd) p {
-  color: #898099;
-}
-.cd-section:nth-of-type(even) {
-  background-color: #745360;
-}
-.cd-section:nth-of-type(even) p {
-  color: #bda3ad;
-}
-.cd-section h1, .cd-section p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  max-width: 768px;
-  text-align: center;
-}
-.cd-section h1 {
-  color: white;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-size: 1.25rem;
-}
-.cd-section p {
-  line-height: 1.6;
-}
-@media only screen and (min-width: 768px) {
-  .cd-section h1 {
-    font-size: 30px;
-    font-size: 1.875rem;
-  }
-  .cd-section p {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 2;
-  }
-}
-
-.cd-scroll-down {
-  position: absolute;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 20px;
-  width: 38px;
-  height: 44px;
-  background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
-}
-*/
-
-/* No Touch devices */
-.cd-nav-trigger {
-  display: none;
-}
-
-.no-touch #cd-vertical-nav {
-  position: fixed;
-  right: 40px;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.no-touch #cd-vertical-nav li {
-  text-align: right;
-}
-.no-touch #cd-vertical-nav a {
-  display: inline-block;
-  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.no-touch #cd-vertical-nav a:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.no-touch #cd-vertical-nav a span {
-  float: right;
-  display: inline-block;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  -o-transform: scale(0.6);
-  transform: scale(0.6);
-}
-.no-touch #cd-vertical-nav a:hover span {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-.no-touch #cd-vertical-nav a:hover .cd-label {
-  opacity: 1;
-}
-.no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: white;
-}
-.no-touch #cd-vertical-nav .cd-dot {
-  position: relative;
-  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
-  top: 8px;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: #d88683;
-  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
-  transition: transform 0.2s, background-color 0.5s;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
-.no-touch #cd-vertical-nav .cd-label {
-  position: relative;
-  margin-right: 10px;
-  padding: .4em .5em;
-  color: white;
-  font-size: 14px;
-  font-size: 0.875rem;
-  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-  transition: transform 0.2s, opacity 0.2s;
-  opacity: 0;
-  -webkit-transform-origin: 100% 50%;
-  -moz-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
-  -o-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-}
-
-/* Touch devices */
-.touch .cd-nav-trigger {
-  display: block;
-  z-index: 2;
-  position: fixed;
-  bottom: 30px;
-  right: 5%;
-  height: 44px;
-  width: 44px;
-  border-radius: 0.25em;
-  background: rgba(255, 255, 255, 0.9);
-}
-.touch .cd-nav-trigger span {
-  position: absolute;
-  height: 4px;
-  width: 4px;
-  background-color: #3e3947;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-.touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
-  content: '';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  background-color: inherit;
-  border-radius: inherit;
-}
-.touch .cd-nav-trigger span::before {
-  top: -9px;
-}
-.touch .cd-nav-trigger span::after {
-  bottom: -9px;
-}
-
-.touch #cd-vertical-nav {
-  position: fixed;
-  z-index: 1;
-  right: 5%;
-  bottom: 30px;
-  width: 90%;
-  max-width: 400px;
-  max-height: 90%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform-origin: right bottom;
-  -moz-transform-origin: right bottom;
-  -ms-transform-origin: right bottom;
-  -o-transform-origin: right bottom;
-  transform-origin: right bottom;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  border-radius: 0.25em;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-.touch #cd-vertical-nav a {
-  display: block;
-  padding: 1em;
-  border-bottom: 1px solid rgba(62, 57, 71, 0.1);
-}
-.touch #cd-vertical-nav a span:first-child {
-  display: none;
-}
-.touch #cd-vertical-nav a.is-selected span:last-child {
-  color: #d88683;
-}
-.touch #cd-vertical-nav.open {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger {
-  background-color: transparent;
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span {
-  background-color: rgba(62, 57, 71, 0);
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
-  background-color: #3e3947;
-  height: 3px;
-  width: 20px;
-  border-radius: 0;
-  left: -8px;
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 1px;
-}
-.touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-  bottom: 0;
-}
-.touch #cd-vertical-nav li:last-child a {
-  border-bottom: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .touch .cd-nav-trigger, .touch #cd-vertical-nav {
-    bottom: 40px;
-  }
-}
-
-    
-    </style>
-    
+            $('#calendar').fullCalendar({
+                // put your options and callbacks here
+            })
+        });
+    </script>
 </head>
 
-<body>
+<body id="all">
 
-<!--    <div class="wrapper">-->
+    <div class="wrapper">
 
-        <!-- Sidebar -->
-        
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="index.html">HOME</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
+-->
                     <li class="nav-item">
                         <a class="nav-link" href="aspects.html">ASPECTS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="board.html">COORDINATORS</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="mahalaya.html">MAHALAYA</a>
                     </li>  
+-->
                     <li class="nav-item">
-                        <a class="nav-link active" href="upcoming.html">UPCOMING</a>
-                    </li> 
+                        <a class="nav-link" href="upcoming.html">PCC</a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQs</a>
-                    </li>  
+                        <a class="nav-link" href="faq.html">RESOURCES</a>
+                    </li>
                 </ul>
-            </div>  
+            </div>
         </nav>
 
-        <!-- Page Conent -->
+        <!-- Page Content -->
+        <section class="top">
+            <div id="content">
 
-	<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+                <div class="row">
+                    <div class="col-md-4 pcc_bg" style="padding-right: 0px;">
 
-	<section id="section1" class="cd-section">
-		<h1>Vertical Fixed Navigation</h1>
-		<a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
-	</section><!-- cd-section -->
+                        <img src="/Pictures/test2.png" class="  leftcol" style="height: 100vh; width: 100vw;">
 
-	<section id="section2" class="cd-section">
-		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-	</section><!-- cd-section -->
-
-	<section id="section3" class="cd-section">
-		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-	</section><!-- cd-section -->
-
-	<section id="section4" class="cd-section">
-		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-	</section><!-- cd-section -->
-
-	<section id="section5" class="cd-section">
-		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-	</section><!-- cd-section -->
-
-	<section id="section6" class="cd-section">
-		<p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
-	</section><!-- cd-section -->
-        <!-- Outside the Page Content div -->
-<!--        <div class="overlay"></div>-->
-
-<!--    </div>-->
+                    </div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+
+                    <div class="col-md-8 rightcol" style="">
+
+                        <div class="row" style="padding-bottom: 5%;">
+                            <div class="col-lg-12">
+                                <section class="company-heading intro-type" id="parallax-one">
+                                    <div class="container">
+                                        <div class="row product-title-info">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <section class="" id="parallax--bg" style="padding-top: 5%;">
+                                                            <p id="mission_pcc" style="color:whitesmoke;">27th Annual <br> Pilipino Cultural Celebration</p>
+                                                        </section>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="col-md-3">
+                                                    </div>
+
+                                                    <div class="col-md-3">
+
+                                                        <div class="buttons">
+
+                                                            <a href="aspects.html" class="blob-btn" style="text-decoration: none;">Buy Tickets
+                                            <span class="blob-btn__inner">
+                                              <span class="blob-btn__blobs">
+                                                <span class="blob-btn__blob"></span>
+                                                <span class="blob-btn__blob"></span>
+                                                <span class="blob-btn__blob"></span>
+                                                <span class="blob-btn__blob"></span>
+                                              </span>
+                                            </span>
+                                            </a>
+
+
+
+                                                        </div>
+
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                          <defs>
+                                            <filter id="goo">
+                                              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                                              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                                            </filter>
+                                          </defs>
+                                        </svg>
+                                                    </div>
+
+
+                                                    <div class="col-md-3">
+                                                        <div class="buttons">
+
+                                                            <a href="https://www.facebook.com/events/1631840203517884/" class="blob-btn" style="text-decoration: none;">Event Page
+                                            <span class="blob-btn__inner">
+                                              <span class="blob-btn__blobs">
+                                                <span class="blob-btn__blob"></span>
+                                                <span class="blob-btn__blob"></span>
+                                                <span class="blob-btn__blob"></span>
+                                                <span class="blob-btn__blob"></span>
+                                              </span>
+                                            </span>
+                                            </a>
+
+
+
+                                                        </div>
+
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                          <defs>
+                                            <filter id="goo">
+                                              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                                              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                                            </filter>
+                                          </defs>
+                                        </svg>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-12" style="">
+                                                        <a class="ct-btn-scroll ct-js-btn-scroll" href="#anchor_theme"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/anchor/company-hero2.jpg);"></div>
+                                </section>
+                            </div>
+
+                        </div>
+                        
+                        <div class="row" id="anchor_theme" style="background-image: url('http://www.543themes.com/uploads/1/1/7/0/117042223/white-vector-background.jpg'); background-position: center; background-size: cover;">
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-6" style="padding-bottom: 5%;">
+                                <p class = "theme_pcc"> Event Details:</p>
+                                <p class = "logistics"><em style="color: #2D3A9A; font-size: 150%; font-weight: 600;">When:</em> April 27 and April 28<br> Doors open @ 7PM</p>
+                                <p class = "logistics"><em style="color: #2D3A9A; font-size: 150%; font-weight: 600;">Where:</em> UCSC Mainstage Theater</p>
+                                <p class = "logistics"><em style="color: #2D3A9A; font-size: 150%; font-weight: 600;">Tickets:</em> $15 General Admission <br> <em style="color: #489AD2">Friday Showing -</em> $10 <br><em style="color: #489AD2">Saturday Showing -</em> $12 <br> <em style="color: #489AD2">**These prices only apply for seniors, UCSC students, alumni, staff and faculty</em></p>
+                            </div>
+
+                            <div class="col-md-3">
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class = "theme_pcc" style="color:ghostwhite;">Noon At Ngayon</p>
+                                <p  class = "theme_pcc_2" style="color:ghostwhite;">"Then and Now" </p>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-6">
+                                <p id="show_desc">"Follow the story of Ramona Gonzaga, a proud Pilipinx, who returns home after a year at UCCP to face a political and social divide between her peers and family before she is murdered in cold blood. But who did it? Her parents,
+                                    Maribel and Joseph Gonzaga think it was her boyfriend. But something isn't right. We follow the night of her death and find clues that will point us to the truth. The simplest answer isn't always the right one. And
+                                    the truth we thought we knew might be the one lying to us from the start."</p>
+                            </div>
+
+                            <div class="col-md-3">
+                            </div>
+
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-12" style="padding: 5%;">
+                            </div>
+
+                        </div>
+                        
+                        <div class="row" style="background-image: url('http://www.543themes.com/uploads/1/1/7/0/117042223/white-vector-background.jpg'); background-position: center; background-size: cover;">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-8">
+                                <p class = "theme_pcc"> What is PCC?</p>
+                                <p id = "show_desc_2">PCC is an annual production that Bayanihan puts together to showcase out Filipino culture as well as address pertinent issues in society. This year, we are tackling the issues of colonial mentality and colorism. Our production features all of Bayanihans's performing arts troupes interwoven together to tell an original story surrounding Pilipino history and culture. Our annual production provides an open space and dialogue for our cast, faculty, and the rest of the community to come together and learn about another aspect of the Pilipinx/Pilipino history and culture.  </p>
+                                
+                            </div>
+
+                            <div class="col-md-2">
+                            </div>
+
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class = "theme_pcc" style = "color: ghostwhite;"> Teasers and Trailers!</p>
+                            </div>
+
+                        </div>
+                        
+                        <div class="row" style="padding-bottom: 10%; padding-top: 5%;">
+                            
+                            <div class = "col-md-1">
+                            </div>
+                            
+                            <div class="col-md-3" >
+                                <iframe width="400vw" height="300vh" src="https://www.youtube.com/embed/bxRUWl8O9wA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class = "col-md-2">
+                            </div>
+                            
+                            
+                            
+                            <div class="col-md-3">
+                                <iframe width="400vw" height="300vh" src="https://www.youtube.com/embed/jgs3Rbn_Gyg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class = "col-md-2">
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+    </script>
+
+
 
     <script type="text/javascript" src="js/script.js"></script>
-<!--
-    <script type="text/javascript">
-        $(document).ready(toggleSidebar);
-
-    </script>
--->
-    
     <script>
-    jQuery(document).ready(function($){
-	var contentSections = $('.cd-section'),
-		navigationItems = $('#cd-vertical-nav a');
-
-	updateNavigation();
-	$(window).on('scroll', function(){
-		updateNavigation();
-	});
-
-	//smooth scroll to the section
-	navigationItems.on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
-    //smooth scroll to second section
-    $('.cd-scroll-down').on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
-
-    //open-close navigation on touch devices
-    $('.touch .cd-nav-trigger').on('click', function(){
-    	$('.touch #cd-vertical-nav').toggleClass('open');
-  
-    });
-    //close navigation on touch devices when selectin an elemnt from the list
-    $('.touch #cd-vertical-nav a').on('click', function(){
-    	$('.touch #cd-vertical-nav').removeClass('open');
-    });
-
-	function updateNavigation() {
-		contentSections.each(function(){
-			$this = $(this);
-			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
-			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
-				navigationItems.eq(activeSection).addClass('is-selected');
-			}else {
-				navigationItems.eq(activeSection).removeClass('is-selected');
-			}
-		});
-	}
-
-	function smoothScroll(target) {
-        $('body,html').animate(
-        	{'scrollTop':target.offset().top},
-        	600
-        );
-	}
-});
-    
+        (function(){
+      $('dl').on('click', 'dt', function() {
+          $(this).next().toggleClass('expand');
+          $(this).toggleClass('expand');
+      });
+    })();
     </script>
 
 </body>

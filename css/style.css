@@ -13,6 +13,13 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+/*font-family: 'Abril Fatface', cursive;*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400i');
+/*font-family: 'Josefin Sans', sans-serif;*/
+
+
 @font-face {
     font-family: myFirstFont;
     src: url('/Pictures/ailerons.woff');
@@ -933,7 +940,14 @@ padding for entire sidebar (top part only to center content of sidebar)
      height: 12px;
      width: 12px;
      border-radius: 50%;
-     background-color: #d88683;
+/*     background-color: #d88683;*/
+     
+/*Change dot color*/
+     
+     background-color:darkgoldenrod;
+     
+/*     */
+     
      -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
      -moz-transition: -moz-transform 0.2s, background-color 0.5s;
      transition: transform 0.2s, background-color 0.5s;
@@ -947,7 +961,11 @@ padding for entire sidebar (top part only to center content of sidebar)
      position: relative;
      margin-right: 10px;
      padding: .4em .5em;
+     
+/*     Change color of dot label*/
      color: white;
+/*     */
+     
      font-size: 14px;
      font-size: 0.875rem;
      -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -1434,4 +1452,241 @@ ul.social-icons {
 img, 
 figure {
   max-width: 100%;
+}
+
+/*PCC Page*/
+.pcc_bg{
+/*    background-image: url('/Pictures/test2.png');*/
+/*    background-attachment:fixed;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+ .blank_1{
+/*     padding-bottom: 60%;*/
+     
+     background-color: transparent;
+     
+}
+
+#statement_desc_pcc{
+     color: grey;
+     font-size: 150%;
+}
+
+ #statement_pcc{
+     font-family: 'Barlow', sans-serif;
+     font-size: 350%;
+     letter-spacing: 7px;
+     color:grey;
+}
+
+#mission_pcc{
+     padding:10% 15% 5% 15%;
+     font-size: 350%;
+     text-align: center;
+     font-family: 'Abril Fatface', cursive;     
+    
+}
+
+.theme_pcc{
+/*     padding:0% 15% 0% 15%;*/
+    padding-top: 10%;
+     font-size: 350%;
+     text-align: center;
+     font-family: 'Abril Fatface', cursive;     
+    
+}
+
+.theme_pcc_2{
+     font-size: 200%;
+     text-align: center;
+     font-family: 'Abril Fatface', cursive; 
+}
+
+.leftcol{
+    overflow: hidden;
+}
+
+.rightcol{
+    overflow-y: scroll;
+    height: 100vh;
+/*    background-image: url('http://getwallpapers.com/wallpaper/full/0/0/4/574553.jpg');*/
+/*    background-image: url('https://vieforliving.com/wp-content/uploads/2016/10/blurred-background-20.jpg');*/
+/*    background-image: url('http://bgfons.com/uploads/motion_blur/motion_blur_texture4931.jpg');*/
+/*    background-image:url('http://o-sole-mio-radegundis.de/wp-content/uploads/2016/03/PeachWatercolorWallpaper_Pixejoo.jpg');*/
+/*    background-image: url('https://webgradients.com/public/webgradients_png/004%20Juicy%20Peach.png');*/
+/*    background-image: url('https://i.pinimg.com/originals/42/75/40/427540a31c4745357de6f9ca4dda23e5.jpg');*/
+/*    background-color: #E9A0AB;*/
+    background-image: url(/Pictures/background_2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#show_desc{
+    padding: 5%;
+/*    padding-right: 20%;*/
+/*    padding-bottom: 20%;*/
+    font-size: 120%;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    border-left-width: thick;
+    border-left-style: double;
+    border-right-width: thick;
+    border-right-style: double;
+    color: dimgray;
+    font-style: italic;
+}
+
+.logistics{
+/*     padding: 5%;*/
+/*    padding-right: 20%;*/
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: dimgray;
+    font-style: italic;
+}
+
+
+
+/*Button*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+/*  margin-bottom: 30px;*/
+  text-align: center;
+  text-transform: uppercase;
+/*   Change color of button text*/
+  color: 	#7B7EB5;
+/*    */
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #489AD2;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #2E439C;
+  -webkit-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+}
+.blob-btn:hover {
+  color: white;
+}
+.blob-btn:hover:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 6px;
+  width: 25%;
+  height: 100%;
+    
+/*    Change color of button*/
+  background: 	#7B7EB5;
+/*    */
+    
+  border-radius: 100%;
+  -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
+          transform: translate3d(0, 150%, 0) scale(1.7);
+  -webkit-transition: -webkit-transform 0.45s;
+  transition: -webkit-transform 0.45s;
+  transition: transform 0.45s;
+  transition: transform 0.45s, -webkit-transform 0.45s;
+}
+@supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
+  .blob-btn__blob {
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.4);
+            transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  -webkit-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  -webkit-transition-delay: 0.16s;
+          transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  -webkit-transition-delay: 0.24s;
+          transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  -webkit-transform: translateZ(0) scale(1.7);
+          transform: translateZ(0) scale(1.7);
+}
+@supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
+  .blob-btn:hover .blob-btn__blob {
+    -webkit-transform: translateZ(0) scale(1.4);
+            transform: translateZ(0) scale(1.4);
+  }
 }
