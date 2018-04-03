@@ -245,9 +245,11 @@ padding for entire sidebar (top part only to center content of sidebar)
 }
 .section3
 {
-    padding: 2em;
+/*    padding: 2em;*/
+/*
     padding-top: 5em;
     padding-bottom: 5em;
+*/
      background-color: transparent;
     
 }
@@ -265,10 +267,21 @@ padding for entire sidebar (top part only to center content of sidebar)
      background-color:white;
      letter-spacing: 7px;
 }
+
+#insta_title{
+    /* font-family: 'Yantramanav', sans-serif;
+    */
+     font-family: 'Barlow', sans-serif;
+     font-size: 350%;
+     background-color:white;
+     letter-spacing: 7px;
+    text-align: center;
+}
+
  #events{
      font-family: 'Josefin Sans', sans-serif;
      background-color: white;
-     padding: 10%;
+     padding: 2%;
 }
  #event_head{
      font-size: 30px;
@@ -1298,11 +1311,11 @@ ul.social-icons {
 
 /*//Instagram Feed*/
 .insta{
-    padding: 10em;
+/*    padding: 10em;*/
 }
 
 #insta{
-    padding: 5em;
+/*    padding: 5em;*/
      background-color: white;
 }
 
