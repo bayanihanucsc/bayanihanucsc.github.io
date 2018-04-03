@@ -35,13 +35,11 @@
     <script>
 
         $(document).ready(function() {
-            // page is now ready, initialize the calendar...
-
             $('#calendar').fullCalendar({
                 googleCalendarApiKey: 'AIzaSyCyUTKmOAuIhMRkQp8OXgUZhc35HJDEovk',
                 events: {
                     googleCalendarId: 'admofficer.ucsc@gmail.com',
-                    className: 'gcal-event' // an option!
+                    className: 'gcal-event'
                 },
                 defaultView: 'agendaDay',
                 header: {
@@ -50,9 +48,8 @@
                     right: 'month,agendaWeek,agendaDay prev,next'
                 },
                 views: {
-                    month: { // name of view
+                    month: {
                         titleFormat: 'MMM YYYY'
-                        // other view-specific options here
                     },
                     week: {
                         titleFormat: 'MMM D',
@@ -72,9 +69,6 @@
                 },
                 eventColor: '#81b2e4'
             });
-            
-//            $('#calendar').css('font-size', '1.2em');
-
         });
     </script>
 </head>
