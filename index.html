@@ -26,20 +26,49 @@
 
     
     <!-- FullCalendar dependencies   -->
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.css' rel='stylesheet' />
+    <link href='css/fullcalendar.css' rel='stylesheet' />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.print.css' rel='stylesheet' media='print' />
     <script src='js/moment.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js'></script>
-    <script src='/gcal.min.js'></script>
-    
+    <script type='text/javascript' src='js/gcal.js'></script>
+  
     <script>
 
         $(document).ready(function() {
-            // page is now ready, initialize the calendar...
-
             $('#calendar').fullCalendar({
-                // put your options and callbacks here
-            })
+                googleCalendarApiKey: 'AIzaSyCyUTKmOAuIhMRkQp8OXgUZhc35HJDEovk',
+                events: {
+                    googleCalendarId: 'admofficer.ucsc@gmail.com',
+                    className: 'gcal-event'
+                },
+                defaultView: 'agendaDay',
+                header: {
+                    left: 'title',
+                    center: '',
+                    right: 'month,agendaWeek,agendaDay prev,next'
+                },
+                views: {
+                    month: {
+                        titleFormat: 'MMM YYYY'
+                    },
+                    week: {
+                        titleFormat: 'MMM D',
+                        titleRangeSeparator: ' - ',
+                    },
+                    day: {
+                        titleFormat: 'MMM D, YYYY'
+                    }
+                },
+                selectable: true,
+                minTime: '7:00:00',
+                buttonText: {
+                  today:    'Today',
+                  month:    'Month',
+                  week:     'Week',
+                  day:      'Day',
+                },
+                eventColor: '#81b2e4'
+            });
         });
     </script>
 </head>
