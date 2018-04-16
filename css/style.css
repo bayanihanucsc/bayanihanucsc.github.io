@@ -129,6 +129,10 @@ span.line {
      font-size: 3vh;
      text-align: center;
      font-family: 'Josefin Sans', sans-serif;
+     border-bottom-style: double;
+     border-bottom-width: 10px;
+         
+    
 /*
      border-bottom-style: dashed;
     
@@ -204,6 +208,7 @@ span.line {
      font-family: 'Josefin Sans', sans-serif;
      background-color: white;
      padding: 9% 2% 10% 2%;
+     
 }
  #event_head{
      font-size: 30px;
@@ -355,11 +360,11 @@ span.line {
 /*    padding-top: 10em;*/
     padding-right: 5em;
     padding-left: 5em;
-    padding-bottom: 24.2em;
+    padding-bottom: 3em;
     background-color: white;
 /*    position: fixed;*/
 /*    overflow-y: scroll;*/
-    max-height:485px;
+/*    max-height:485px;*/
 
 }
 
